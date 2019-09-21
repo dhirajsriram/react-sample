@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, Switch} from "react-router-dom";
+import Loader from "./common/loader/loader";
+import routes from "./routes";
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Header = React.lazy(() => import("./common/header/header"));
+const initialState = { };
+type State = Readonly<typeof initialState>;
+
+class App extends Component {
+  readonly state: State = initialState;
+  render() {
+    return (
+        <React.Suspense fallback={<Loader />}>
+        <Header/>
+          <div className="main-container">
+            <Switch>
+              {routes.map((route:any,index:number) => (
+                <Route
+                  key={route.path}
+                  path={route.path}
+                  render={(props: any) => (
+                    <route.component {...props} />
+                  )}
+                />
+              ))}
+            </Switch>
+          </div>
+        </React.Suspense>
+    );
+  }
 }
 
 export default App;
