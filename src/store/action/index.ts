@@ -7,3 +7,9 @@ export const increment = ():Actions=>{
         type: 'INCREMENT'
     }
 }
+
+export const decrement = ():Actions=>{
+    return {
+        type: 'DECREMENT'
+    }
+}
