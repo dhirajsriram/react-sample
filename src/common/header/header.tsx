@@ -1,20 +1,59 @@
-import React from 'react'
-import { increment , decrement } from "../../store/action";
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import { Drawer } from '@material-ui/core';
+import SideMenu from './sidemenu/sidemenu';
 
-interface Props { }
-interface State {
-    renameReducer: number
-}
-function Header(props: Props) {
-    const counter = useSelector((state: State) => state)
-    const dispatch = useDispatch();
-    return (
-        <div>{counter.renameReducer}
-        <button onClick={()=>dispatch(increment())}>+</button>
-        <button onClick={()=>dispatch(decrement())}>-</button>
-        </div>
-    )
-}
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+  }),
+);
 
-export default Header
+export default function Header() {
+  const classes = useStyles();
+  const [state, setState] = React.useState({
+    left: false,
+  });
+  const toggleDrawer = (open: boolean) => (
+    event: React.KeyboardEvent | React.MouseEvent,
+  ) => {
+    if (
+      event.type === 'keydown' &&
+      ((event as React.KeyboardEvent).key === 'Tab' ||
+        (event as React.KeyboardEvent).key === 'Shift')
+    ) {
+      return;
+    }
+    setState({"left": open });
+}
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton onClick={toggleDrawer(true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            Sample App
+          </Typography>
+        </Toolbar>
+        <Drawer open={state.left} onClose={toggleDrawer(false)}>
+        <SideMenu></SideMenu>
+      </Drawer>
+      </AppBar>
+    </div>
+  );
+}
