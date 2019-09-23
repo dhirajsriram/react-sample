@@ -21,6 +21,6 @@ export default function Loader() {
 
   return (
     <div>
-      <img className={classes.loader} alt="loader"/></div>
+      ...Loading</div>
   );
 }

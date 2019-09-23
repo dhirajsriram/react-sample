@@ -7,12 +7,10 @@ interface State {
     renameReducer: number
 }
 function Header(props: Props) {
-    const counter = useSelector((state: State) => state)
-    const dispatch = useDispatch();
     
     return (
-        <div>{counter.renameReducer}
-        <button onClick={()=>dispatch(increment())}>+</button>
+        <div>
+        <button>+</button>
         </div>
     )
 }
