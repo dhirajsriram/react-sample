@@ -49,6 +49,22 @@ test("Clicking on the hamburger opens the sidemenu", async () => {
   expect(items).toBeDefined()
 });
 
+test("Clicking on the hamburger opens the sidemenu", async () => {
+  jest.setTimeout(30000);
+  const Menu = 'menu';
+  const Home='HOME';
+  const {getByLabelText,getByText}  = render(
+    <Provider store={store}>
+    <MemoryRouter initialEntries={["/asdasd"]}>
+      <App />
+    </MemoryRouter></Provider>
+  );
+  await wait(()=> {fireEvent.click(getByLabelText(Menu))});
+  await wait(()=> {fireEvent.click(getByText(/Home/))});
+  await wait(()=> expect(getByText(Home)).toBeDefined());
+});
+
+
 
 
 
