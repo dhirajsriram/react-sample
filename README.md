@@ -117,7 +117,7 @@ The application was designed to be as granular as possible in terms of functiona
 
 [`src/assets`](./src/assets) - Images necessary for the application are present here.
 
-[`src/scss`](./src/assets) - Contains the .scss files for variables, resets, mixing and typography which is specific to the application
+[`src/scss`](./src/scss) - Contains the .scss files for variables, resets, mixing and typography which is specific to the application
 
 [`src/store`](./src/store) - Contains the files related to the redux store such as the action and reducers. 
 
