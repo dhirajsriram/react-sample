@@ -1,11 +1,11 @@
 
 # React-Sample
 
-**(Include Project link if required)**
+**(Include Project link if required //HERE// )**
 
 ## Abstract
 
-<-- Placeholder for project abstract -->
+<-- Placeholder for project abstract //HERE// -->
 
 ## Installation
 
