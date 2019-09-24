@@ -27,7 +27,7 @@ test("Unknown routes should be navigated to a 404 page", async () => {
 test("Default routes to be navigated to home page", async () => {
   jest.setTimeout(30000);
   const hometext = 'HOME'
-  const {getByText}  = render(
+  const {getByText} = render(
       <Provider store={store}>
     <MemoryRouter initialEntries={["/"]}>
       <App />
