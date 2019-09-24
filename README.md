@@ -49,7 +49,7 @@ Code Splitting is a must-have for any front-end application due to the performan
 
 Typescript is prefered over the regular javascript due to the advantages such as
 - Great tooling support with IntelliSense
-- Optional static typing (the key here is optional)
+- Optional static typing 
 - Ahead-Of-Time type checking
 - Type Inference, which gives some of the benefits of types, without actually using them
 
@@ -71,7 +71,7 @@ React suspense has been used to help us manage the loading state of our code-spl
 
 ### Functional Components
 
-Most of the components in the application are stateless functional components. Hooks have been used if state is demanded in component.
+Most of the components in the application are stateless functional components. Hooks have been used if components needs to maintain a state.
 
 ## Deployment
 <--could change //HERE// -->
@@ -94,21 +94,20 @@ The application works on a single page, Following are the views that the applica
 The application was designed to be as granular as possible in terms of functionality. Separation of concerns was the goal while designing the project. The general rule of thumb was to have the return statements to be as minimal as possbile. The folder structure of the application is as follows
 
 ```
-├── public
-├── node_modules
-├── package.json
-├── README.md
-└── src
-    ├── common
-    ├── pages
-    ├── scss
-    ├── store
-    ├── App.tsx
-    ├── App.test.tsx
-    ├── index.tsx
-    ├── logo.svg
-    └── routes.ts
-    
+├── 📁public
+├── 📁node_modules
+├── 📄package.json
+├── 📄README.md
+└── 📁src
+    ├── 📁common
+    ├── 📁pages
+    ├── 📁scss
+    ├── 📁store
+    ├── 📄App.tsx
+    ├── 📄App.test.tsx
+    ├── 📄index.tsx
+    ├── 📄logo.svg
+    └── 📄routes.ts 
 ```
 
 [`src/common`](./src/common) - Contains all the shared components such as error, Search, menu, map, etc
@@ -125,10 +124,8 @@ The application was designed to be as granular as possible in terms of functiona
 
 The application strongly follows a Material design approach. Elements shown to users represent life-like materials like paper which is something that a user can connect with very easily.
 
-The application was designed with a map in mind. The Map on the left represents a canvas of a map and the markers on the right represent the marking made on the canvas.
-
 ## Error Handling
-
+<-- check //HERE// -->
 The application handles errors gracefully. The application checks for the response status. If the status is not 200 an Error component is shown to the user with the corresponding error message.
 
 ## Future Implementation
