@@ -41,7 +41,7 @@ export default function Header() {
 }
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="inherit">
         <Toolbar>
           <IconButton onClick={toggleDrawer(true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
@@ -51,7 +51,7 @@ export default function Header() {
           </Typography>
         </Toolbar>
         <Drawer open={state.left} onClose={toggleDrawer(false)}>
-        <SideMenu></SideMenu>
+        <SideMenu toggleDrawer={toggleDrawer}></SideMenu>
       </Drawer>
       </AppBar>
     </div>

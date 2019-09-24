@@ -1,12 +1,13 @@
 import React from 'react';
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
-import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
+import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
+import HomeIcon from '@material-ui/icons/Home';
+import InfoIcon from '@material-ui/icons/Info'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -17,37 +18,37 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function ListItemLink(props: ListItemProps<'a', { button?: true }>) {
-  return <ListItem button component="a" {...props} />;
+interface Props {
+  toggleDrawer : Function
 }
 
-export default function SideMenu() {
+export default function SideMenu(props:Props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root}
+    role="presentation"
+      onClick={props.toggleDrawer(false)}
+      onKeyDown={props.toggleDrawer(false)}>
       <List component="nav" aria-label="main mailbox folders">
         <ListItem button>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <ListItemText primary="Inbox" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <DraftsIcon />
-          </ListItemIcon>
-          <ListItemText primary="Drafts" />
+          <Link to="/" className="default-text">
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </Link>
         </ListItem>
       </List>
       <Divider />
       <List component="nav" aria-label="secondary mailbox folders">
         <ListItem button>
-          <ListItemText primary="Trash" />
+          <a href="https://github.com/dhirajsriram" className="default-text">
+            <ListItemIcon>
+              <InfoIcon />
+            </ListItemIcon>
+            <ListItemText primary="About" /></a>
         </ListItem>
-        <ListItemLink href="#simple-list">
-          <ListItemText primary="About" />
-        </ListItemLink>
       </List>
     </div>
   );

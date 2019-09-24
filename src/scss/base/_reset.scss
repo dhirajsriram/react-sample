@@ -1,4 +1,13 @@
 body,html{
     margin:0;
     padding:0;
+    .main-container{
+        padding:16px;
+    }
+    .default-text{
+        color: inherit;
+        text-decoration: none;
+        display: contents;
+    }
 }
+
