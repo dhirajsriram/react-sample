@@ -39,11 +39,22 @@ Once the packages have been installed you may serve application locally using `n
 ## Architecture
 
 A high level architecture of the application can be found below
-<-- Placeholder for Project Architecture Diagram -->
+<-- Placeholder for Project Architecture Diagram //HERE// -->
 
 ### Code Splitting
 
 Code Splitting is a must-have for any front-end application due to the performance benefits it offers. Sending the application in chunks improves the load times of the application by a great margin. Code splitting has been thoroughly followed in the entire application
+
+### Typescript
+
+Typescript is prefered over the regular javascript due to the advantages such as
+- Great tooling support with IntelliSense
+- Ahead-Of-Time type checking
+- Type Inference, which gives some of the benefits of types, without actually using them
+
+## Testing
+
+Testing is engrained in almost every component in the application. All component folders have a *[component].test.ts* which contains the set of unit tests specific to the perticula component. Running `npm test` runs all the .test files across all components.
 
 ### Support for Older Browsers
 
@@ -69,9 +80,11 @@ Most of the components in the application are stateless functional components. H
 ## Description
 
 The application works on a single page, Following are the views that the application works on
-<--Placeholder to list all views-->
+<--Placeholder to list all views //HERE// -->
 
 ### Describe Individual Pages here
+
+<-- Describe Individual Pages //HERE// -->
 
 ## Design
 
@@ -97,4 +110,5 @@ The application handles errors gracefully. The application checks for the respon
 
 ## Future Implementation
 
+<-- Future prospects //HERE// -->
 
