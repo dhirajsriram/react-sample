@@ -93,21 +93,23 @@ The application works on a single page, Following are the views that the applica
 
 The application was designed to be as granular as possible in terms of functionality. Separation of concerns was the goal while designing the project. The general rule of thumb was to have the return statements to be as minimal as possbile. The folder structure of the application is as follows
 
-
+```
 ├── public
 ├── node_modules
 ├── package.json
 ├── README.md
 └── src
-    ├── [**common**](./src/common)
-    ├── [**pages**](./src/pages)
-    ├── [**scss**](./src/scss)
-    ├── [**store**](./src/store)
+    ├── common
+    ├── pages
+    ├── scss
+    ├── store
     ├── App.tsx
     ├── App.test.tsx
     ├── index.tsx
-    └── logo.svg
-
+    ├── logo.svg
+    └── routes.ts
+    
+```
 
 [`src/common`](./src/common) - Contains all the shared components such as error, Search, menu, map, etc
 
