@@ -26,7 +26,7 @@ The following are the major libraries that are used in front-end.
 
 Once the packages have been installed you may serve application locally using `npm start` on the root directory of the application. Following is the port the application runs on
 
-- `react-sample` :  [http://localhost:3000](http://localhost:3000)
+`react-sample` :  [http://localhost:3000](http://localhost:3000)
 
 ### Scripts
 
@@ -49,6 +49,7 @@ Code Splitting is a must-have for any front-end application due to the performan
 
 Typescript is prefered over the regular javascript due to the advantages such as
 - Great tooling support with IntelliSense
+- Optional static typing (the key here is optional)
 - Ahead-Of-Time type checking
 - Type Inference, which gives some of the benefits of types, without actually using them
 
