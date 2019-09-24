@@ -55,7 +55,7 @@ Typescript is prefered over the regular javascript due to the advantages such as
 
 ## Testing
 
-Testing is engrained in almost every component in the application. All component folders have a *[component].test.ts* which contains the set of unit tests specific to the perticula component. Running `npm test` runs all the .test files across all components.
+Testing is engrained in almost every component in the application. All component folders have a **[component].test.ts** which contains the set of unit tests specific to the perticular component. Running `npm test` runs all the .test files across all components.
 
 ### Support for Older Browsers
 
@@ -71,10 +71,10 @@ React suspense has been used to help us manage the loading state of our code-spl
 
 ### Functional Components
 
-Most of the components in the application are stateless functional components. Hooks have been used to manage the state if the component demands it.
+Most of the components in the application are stateless functional components. Hooks have been used if state is demanded in component.
 
 ## Deployment
-
+<--could change //HERE// -->
 - The application has been deployed on Netlify.
 - Continuous Integration has been enabled and is currently synced with the repo [https://github.com/dhirajsriram/react-sample](https://github.com/dhirajsriram/react-sample)
 
@@ -91,7 +91,23 @@ The application works on a single page, Following are the views that the applica
 
 ### Folder structure
 
-The application was designed to be as granular as possible in terms of functionality. Separation of concerns was the goal while designing the project. The folder structure of the application is as follows
+The application was designed to be as granular as possible in terms of functionality. Separation of concerns was the goal while designing the project. The general rule of thumb was to have the return statements to be as minimal as possbile. The folder structure of the application is as follows
+
+```
+├── public
+├── node_modules
+├── package.json
+├── README.md
+└── src
+    ├── [**common**](./src/common)
+    ├── [**pages**](./src/pages)
+    ├── [**scss**](./src/scss)
+    ├── [**store**](./src/store)
+    ├── App.tsx
+    ├── App.test.tsx
+    ├── index.tsx
+    └── logo.svg
+```
 
 [`src/common`](./src/common) - Contains all the shared components such as error, Search, menu, map, etc
 
