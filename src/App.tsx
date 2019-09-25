@@ -13,7 +13,7 @@ class App extends Component {
     return (
         <React.Suspense fallback={<Loader />}>
         <Header/>
-          <div className="main-container">
+        <div className="main-container">
             <Switch>
               {routes.map((route:any,index:number) => (
                 <Route

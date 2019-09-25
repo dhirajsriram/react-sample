@@ -1,8 +1,8 @@
-import renameReducer from "./rename";
-import { combineReducers } from "redux"
+import renameReducer from './rename';
+import { combineReducers } from 'redux';
 
-const allReducers =  combineReducers({
+const allReducers = combineReducers({
 	renameReducer
 });
 
-export default allReducers
+export default allReducers;

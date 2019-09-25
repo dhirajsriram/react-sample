@@ -3,7 +3,7 @@ import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { MemoryRouter } from "react-router";
 import App from "../../App";
-import {render,wait,cleanup, waitForElement, fireEvent, getByText} from '@testing-library/react';
+import {render,wait,cleanup, fireEvent} from '@testing-library/react';
 import { Provider } from "react-redux";
 import allReducers from "../../store/reducer";
 import { createStore } from "redux";

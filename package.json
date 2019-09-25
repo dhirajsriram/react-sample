@@ -26,7 +26,6 @@
     "typescript": "3.6.3"
   },
   "scripts": {
-    "deleteBuild": "rimraf build",
     "start": "set NODE_ENV=development REACT_APP_API_URL=abcdef && react-scripts start",
     "build": "NODE_ENV=production REACT_APP_API_URL=abcdef react-scripts build",
     "test": "react-scripts test",
