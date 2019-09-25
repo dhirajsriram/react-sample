@@ -1,5 +1,6 @@
 import React from 'react';
 // import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
+import "./loader.scss";
 
 interface Styles {
     loader : string
@@ -18,7 +19,6 @@ interface Styles {
 
 export default function Loader() {
   return (
-    <div>
-      ...Loading</div>
+    <div className="loader"></div>
   );
 }

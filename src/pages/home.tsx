@@ -1,9 +1,10 @@
 import React from 'react';
+import Loader from '../common/loader/loader';
 
 const Home: React.FC = () => {
   return (
     <div className="home-container">
-      <span>HOME</span>
+      <Loader></Loader>
     </div>
   );
 }
